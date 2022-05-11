@@ -1,0 +1,293 @@
+<!-- Start Mobile Navbar -->
+<div
+    id="offcanvas-flip"
+    class="mobile-navbar uk-mobile-navbar"
+    uk-offcanvas="flip: true; overlay: true"
+>
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <nav
+            class="uk-navbar-container"
+            data-uk-scrollspy-nav="offset: 0; closest: li; scroll: true"
+        >
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a routerLink="/" routerLinkActive="uk-active">Home</a>
+                </li>
+                <!-- <li>
+                    <a routerLink="/about" routerLinkActive="uk-active"
+                        >About</a
+                    >
+                </li>
+                <li>
+                    <a href="#" uk-icon="icon: triangle-down">Services</a>
+                    <div uk-dropdown>
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li>
+                                <a
+                                    routerLink="/services"
+                                    routerLinkActive="uk-active"
+                                    >Services</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    routerLink="/service-details"
+                                    routerLinkActive="uk-active"
+                                    >Service Details</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" uk-icon="icon: triangle-down">Projects</a>
+                    <div uk-dropdown>
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li>
+                                <a
+                                    routerLink="/projects"
+                                    routerLinkActive="uk-active"
+                                    >Project</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    routerLink="/project-details"
+                                    routerLinkActive="uk-active"
+                                    >Project Details</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a routerLink="/team" routerLinkActive="uk-active">Team</a>
+                </li>
+                <li>
+                    <a routerLink="/testimonials" routerLinkActive="uk-active"
+                        >Testimonials</a
+                    >
+                </li>
+                <li>
+                    <a href="#" uk-icon="icon: triangle-down">Blog</a>
+                    <div uk-dropdown>
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li>
+                                <a
+                                    routerLink="/blog"
+                                    routerLinkActive="uk-active"
+                                    >Blog</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    routerLink="/blog-details"
+                                    routerLinkActive="uk-active"
+                                    >Blog Details</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a routerLink="/contact" routerLinkActive="uk-active"
+                        >Contact</a
+                    >
+                </li> -->
+                <li>
+                    <a href="#" uk-icon="icon: triangle-down">En</a>
+                    <div uk-dropdown>
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li>
+                                <a routerLink="/">En</a>
+                            </li>
+                            <li>
+                                <a routerLink="/id" routerLinkActive="uk-active"
+                                    >Id</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- End Mobile Navbar -->
+
+<!-- Start Navbar Area -->
+<header
+    class="header-area {{ navClass }}"
+    data-uk-sticky="top: 0; animation: uk-animation-slide-top;"
+>
+    <div class="uk-container">
+        <div class="uk-navbar">
+            <div class="logo uk-navbar-left">
+                <a routerLink="/">
+                    <img src="assets/img/{{ logo }}" alt="logo" />
+                </a>
+            </div>
+
+            <div
+                class="uk-navbar-toggle"
+                id="navbar-toggle"
+                uk-toggle="target: #offcanvas-flip"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar uk-navbar-right">
+                <nav
+                    class="uk-navbar-container"
+                    data-uk-scrollspy-nav="offset: 0; closest: li; scroll: true"
+                >
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <a routerLink="/" routerLinkActive="uk-active"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://drive.google.com/file/d/1dG5M-Ex0PHizHv4ZH4u2i5vBUbxU5zYV/view?usp=sharing"
+                                target="_blank"
+                                >Guide Book</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://forms.gle/na7W7jDytBozAE7SA"
+                                target="_blank"
+                                >Register</a
+                            >
+                        </li>
+                        <!-- <li>
+                            <a routerLink="/about" routerLinkActive="uk-active"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" uk-icon="icon: triangle-down"
+                                >Services</a
+                            >
+                            <div uk-dropdown>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li>
+                                        <a
+                                            routerLink="/services"
+                                            routerLinkActive="uk-active"
+                                            >Services</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            routerLink="/service-details"
+                                            routerLinkActive="uk-active"
+                                            >Service Details</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" uk-icon="icon: triangle-down"
+                                >Projects</a
+                            >
+                            <div uk-dropdown>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li>
+                                        <a
+                                            routerLink="/projects"
+                                            routerLinkActive="uk-active"
+                                            >Project</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            routerLink="/project-details"
+                                            routerLinkActive="uk-active"
+                                            >Project Details</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a routerLink="/team" routerLinkActive="uk-active"
+                                >Team</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                routerLink="/testimonials"
+                                routerLinkActive="uk-active"
+                                >Testimonials</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" uk-icon="icon: triangle-down">Blog</a>
+                            <div uk-dropdown>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li>
+                                        <a
+                                            routerLink="/blog"
+                                            routerLinkActive="uk-active"
+                                            >Blog</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            routerLink="/blog-details"
+                                            routerLinkActive="uk-active"
+                                            >Blog Details</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a
+                                routerLink="/contact"
+                                routerLinkActive="uk-active"
+                                >Contact</a
+                            >
+                        </li> -->
+                        <li>
+                            <a href="#" uk-icon="icon: triangle-down">En</a>
+                            <div uk-dropdown>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li>
+                                        <a routerLink="/">En</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            routerLink="/id"
+                                            routerLinkActive="uk-active"
+                                            >Id</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- <div class="lang">
+                    <form>
+                        <div>
+                            <select>
+                                <option value="eng">En</option>
+                                <option value="ge">Ge</option>
+                            </select>
+                        </div>
+                    </form>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End Navbar Area -->

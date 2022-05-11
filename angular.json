@@ -1,0 +1,141 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "73c5d457-5bd4-4abb-b969-327ecb6575d8"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "baylin-ng": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/baylin-ng",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+                "node_modules/owl.carousel/dist/assets/owl.carousel.css",
+                "node_modules/owl.carousel/dist/assets/owl.theme.default.css",
+                "src/styles.scss",
+                "src/assets/css/animate.min.css",
+                "src/assets/css/flaticon.css",
+                "src/assets/css/magnific-popup.min.css",
+                "src/assets/css/odometer.min.css",
+                "src/assets/css/style.scss",
+                "src/assets/css/responsive.scss"
+            ],
+            "scripts": [
+                "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/owl.carousel/dist/owl.carousel.js",
+                "node_modules/uikit/dist/js/uikit.min.js",
+                "node_modules/uikit/dist/js/uikit-icons.min.js",
+                "src/assets/js/jquery.magnific-popup.min.js",
+                "src/assets/js/appear.min.js",
+                "src/assets/js/odometer.min.js",
+                "src/assets/js/lax.js",
+                "src/assets/js/custom.js"
+            ],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": ""
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "baylin-ng:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "baylin-ng:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "baylin-ng:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "baylin-ng:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "baylin-ng:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "baylin-ng"
+}
